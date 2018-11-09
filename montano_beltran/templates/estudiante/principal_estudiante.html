@@ -1,0 +1,39 @@
+{% extends "master.html" %}
+{% block contenido %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+     <table id="tabla">
+      <tr>
+          <th>MATRICULA</th>
+          <th>CEDULA</th>
+          <th>NOMBRES</th>
+          <th>APELLIDOS</th>
+
+          <th>CICLO</th>
+          <th>PARALELO</th>
+
+      </tr>
+     {% for c in lista %}
+
+        <tr>
+            <td>{{ c.matricula }}</td>
+            <td>{{ c.cedula }}</td>
+            <td>{{ c.nombres }}</td>
+            <td>{{c.apellidos}}</td>
+            <td>{{c.ciclo}}</td>
+            <td>{{c.paralelo}}</td>
+            
+
+
+
+        </tr>
+     {% endfor %}
+   </table>
+</body>
+</html>
+{% endblock %}
